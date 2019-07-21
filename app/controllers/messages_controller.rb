@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.all
+    @messages = Message.with_rich_text_content_and_embeds
   end
 
   # GET /messages/1
